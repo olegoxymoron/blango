@@ -1,6 +1,8 @@
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
 from django.shortcuts import redirect
+from django.views.decorators.cache import cache_page
+from django.views.decorators.vary import vary_on_cookie
 import logging
 from blog.forms import CommentForm
 from blog.models import Post
