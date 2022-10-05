@@ -67,6 +67,9 @@ class Dev(Configuration):
     #    'django.middleware.clickjacking.XFrameOptionsMiddleware',
     ]
 
+    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+    ACCOUNT_ACTIVATION_DAYS = 7
+
     ROOT_URLCONF = 'blango.urls'
 
     TEMPLATES = [
