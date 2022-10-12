@@ -52,6 +52,7 @@ class Dev(Configuration):
         'django.contrib.staticfiles',
         'blango_auth',
         'rest_framework',
+        'rest_framework.authtoken',
         'blog',
         'crispy_forms',
         'crispy_bootstrap5',
@@ -61,6 +62,14 @@ class Dev(Configuration):
         "allauth.socialaccount", 
         "allauth.socialaccount.providers.google",
     ]
+
+    REST_FRAMEWORK = {
+        "DEFAULT_AUTHENTICATION_CLASSES": [
+            "rest_framework.authentication.BasicAuthentication",
+            "rest_framework.authentication.SessionAuthentication",
+            "rest_framework.authentication.TokenAuthentication",
+        ]
+    }
 
     SITE_ID = 1
     ACCOUNT_USER_MODEL_USERNAME_FIELD = None
