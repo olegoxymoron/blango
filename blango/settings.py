@@ -202,6 +202,13 @@ class Dev(Configuration):
         },
     }
 
+    SWAGGER_SETTINGS = {
+        "SECURITY_DEFINITIONS": {
+            "Token": {"type": "apiKey", "name": "Authorization", "in": "header"},
+            "Basic": {"type": "basic"},
+        }
+    }
+
     INTERNAL_IPS = ["192.168.10.226"]
 
     AUTH_USER_MODEL = "blango_auth.User"
