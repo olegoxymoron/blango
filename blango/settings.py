@@ -55,6 +55,7 @@ class Dev(Configuration):
         'rest_framework',
         'rest_framework.authtoken',
         'django_filters',
+        "versatileimagefield",
         'blog',
         'crispy_forms',
         'crispy_bootstrap5',
@@ -116,6 +117,8 @@ class Dev(Configuration):
     ACCOUNT_ACTIVATION_DAYS = 7
 
     ROOT_URLCONF = 'blango.urls'
+    MEDIA_ROOT = BASE_DIR / "media"
+    MEDIA_URL = "/media/"
 
     TEMPLATES = [
         {
